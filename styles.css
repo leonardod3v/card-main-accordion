@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+ 
+    /* COLORS */
+    /* Text */
+    --very-darkblue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+
+    /*Background*/
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+
+    /* Dividers */
+    --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body, html {
+    font-family: 'Kumbh Sans', sans-serif;
+    
+    background: linear-gradient(180deg, var(--soft-violet), var(--soft-blue));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main img#box {
+    display: none;
+}
+
+main .container {
+    padding: 2rem;
+    width: 337.5px;
+    min-height: 540px;
+    background-color: var(--light-grayish-blue);
+    border-radius: 20px;
+    margin-top: 5rem;
+    color: var(--very-darkblue);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+    rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    
+}
+
+main .image {
+    display: flex;
+    justify-content: center;
+}
+
+main .image #logo2,
+main .container #box {
+    display: none;
+}
+
+main #logo {
+    position: relative;
+    z-index: 5;
+    width: 15rem;
+    transform: translateY(-77%);
+    margin-bottom: -10rem;
+}
+
+.container .faq {
+    margin-top: 5rem;
+}
+
+.container .faq h1 {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: -0.5rem;
+}
+
+.container .info {
+  font-size: 0.8rem;
+
+}
+
+.container .info ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 2.5rem;
+}
+
+ main .container > .faq > .info ul li:hover {
+  color: var(--soft-red); 
+  cursor: pointer;
+} 
+
+.container .answerText {
+  display: none;
+}
+
+
+@media only screen and (min-width: 1440px) {
+   
+    main .container {
+        display: flex;
+        width: 950px;
+        min-height: 530px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    main .container .image #logo {
+        display: none;
+    } 
+
+    main .container .image #logo2,
+    main .container img#box {
+        display: flex;
+    }
+
+    main .container .image #logo2 {
+        transform: scale(80%) translate(-22%, -5%);
+    }
+
+    main .container img#box {
+        position: absolute;
+        z-index: 3;
+        width: 12rem;
+        height: 11rem;
+        transform: translate(-65%, 100%);
+    }
+
+    main .container .faq {
+        margin-top: -1rem ;
+        width: 60%;
+        padding-right: 5rem;
+    }
+
+    main .container .faq h1 {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    main .container .faq ul li,
+    main .container .faq p {
+        font-size: 0.93rem;
+    }
+}
